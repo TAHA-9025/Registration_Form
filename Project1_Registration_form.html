@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 5px 1px ;
+            box-sizing: border-box;
+            border-radius: 8px;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 98vh;
+            background-image: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background-color: #0404049c;
+            /* Semi-transparent black */
+            width: 350px;
+            height: auto;
+            padding: 15px 20px;
+            border-radius: 17px;
+            border: 1px solid #ffffff50;
+            box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.447);
+            transition: all 0.5s ease;
+        }
+
+        .container:hover {
+            box-shadow: -15px 15px 10px rgba(0, 0, 0, 0.219);
+            scale: 1.05;
+        }
+        
+        #logo {
+            display: block;
+            width: 180px; 
+            /* Adjust the size of the logo */
+            margin: 0 auto 20px; 
+            /* Center the logo and add some space below it */
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+
+        .inputbox input {
+            width: 100%;
+            height: 45px;
+            margin: 6px 0;
+            padding: 13px;
+            border: none;
+            outline: none;
+            border: 2px solid #2377e200;
+            font-size: 10px;
+            background-color: rgba(239, 233, 233, 0.8);
+            /* Slight transparency for inputs */
+            transition: all 0.2s ease;
+        }
+
+        .inputbox input:focus {
+            border: 2px solid #2377e2;
+            font-size: 14px;
+        }
+
+        span {
+            margin-left: 10px;
+            color: white;
+        }
+
+        #submit {
+            float: right;
+        }
+
+        button {
+            background: linear-gradient(90deg, rgb(14, 14, 14), green);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        #checkbox {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+            <img src="https://aspiraskillhub.aspirasys.com/static/media/dashboard-logo.8ad4b0924c7e254923269138c8327348.svg"
+                alt="" id="logo">
+        
+        <h2 class="head">Registration Form</h2>
+        <form action="backend.php">
+            <div class="inputbox">
+                <input type="text" name="first_name" placeholder="First Name"> <br>
+                <input type="text" name="last_name" placeholder="Last Name"><br>
+                <input type="email" name="email" placeholder="Email"><br>
+                <input type="password" name="password" placeholder="Password"><br>
+            </div>
+            <br>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <span>Accept terms and conditions</span>
+            <br><br>
+            <div id="submit">
+                <button type="submit">Submit Now</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
